@@ -1,278 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Influencer Gear Main</title>
-    <link rel="stylesheet" href="styles/influencer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- tailwind and daisy ui cnd -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="https://kit.fontawesome.com/7a5abb4836.js" crossorigin="anonymous"></script>
+  <!-- font awesome -->
+
+  <script src="https://kit.fontawesome.com/a40d3c37c6.js" crossorigin="anonymous"></script>
+
+  <!-- google font manrope-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- tailwind custom classes -->
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'btn-bg': '#FF4240;',
+            'description': 'rgba(19, 19, 24, 0.60);',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- custom styles  -->
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+
 </head>
-<body>
-    
-   <!-- Start Header section -->
 
-    <header>
-        <nav>
-            <h3 class="nav-title">Influencer products</h3>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Sign up</a></li>
-                <li><a href="">Log In</a></li>
-                <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li><i class="fa-solid fa-cart-shopping"></i></li>
+<body class="font-manrope">
+  <!--header section -->
+  <header class=" max-w-[1140px] mx-5 lg:mx-auto">
+    <nav>
+      <div class="navbar my-12 bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
             </ul>
-        </nav>
-        <div class="hero-section">
-            <div class="hero-section-left">
-                <h2 class="hero-section-title">Start your Journey as 
-                    Influencer</h2>
-                <p class="hero-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem vestibulum sed scelerisque eros. Lectus faucibus.</p>
-                <button class="hero-btn">Preebook now<i class="fa-solid fa-arrow-right right-arrow"></i></button>
-            </div>
-            <div class="hero-section-right">
-                <img src="images/main-camera.png" alt="">
-            </div>
+          </div>
+          <a class="btn btn-ghost font-extrabold text-2xl lg:text-4xl">Hockey<span class="text-[#FF4240]">’</span>s</a>
         </div>
-    </header>
-      
-    <!-- End of the Header section -->
+        <div class="navbar-center font-semibold hidden lg:flex">
+          <ul class="menu menu-horizontal text-base px-1">
+            <li><a class="hover:text-[#FF4240]">Home</a></li>
+            <li><a class="hover:text-[#FF4240]">About</a></li>
+            <li><a class="hover:text-[#FF4240]">Pages</a></li>
+            <li><a class="hover:text-[#FF4240]">Blog</a></li>
+            <li><a class="hover:text-[#FF4240]">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end gap-4">
+          <a><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a class="btn bg-btn-bg font-bold text-white">Get Ticket</a>
+        </div>
+      </div>
+    </nav>
 
-    <main>
+    <!-- first slider or carousel -->
 
-   <!-- Start Partner Section -->
-
-     <section class="partner">
-        <img src="logos/Alibaba.svg" alt="">
-        <img src="logos/Amazon.svg" alt="">
-        <img src="logos/Daraz.pk Logo.svg" alt="">
-        <img src="logos/Ebay.svg" alt="">
-        <img src="logos/Rakuten.svg" alt="">
-        <img src="logos/Target.svg" alt="">
-        <img src="logos/Walmart.svg" alt="">
-     </section>
-
-    <!-- End of Partner Section -->
-
-    <!--  Start Product Section  -->
-
-    <section class="product">
-
-        <h2 class="product-title">Popular Collection</h2>
-
-        <div class="product-container">
-
-            <div class="product-box">
-                <img class="product-box-img" src="images/tripod.png" alt="">
-                <h4 class="product-box-title">Flex Tripod</h4>
-                <h5 class="product-box-price">$50.48</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br>available
-                <br>Buyers protection possible!</p>
-
+    <section>
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative h-56 lg:h-[550px] w-full">
+          <div class="bg-[url('../Images/1.png')] bg-no-repeat bg-cover bg-center w-full rounded-2xl">
+            <div class="hidden lg:block bg-stone-900 w-[566px] p-8 rounded-2xl space-y-5 bottom-10 right-10 absolute">
+              <h4 class="text-2xl font-extrabold text-white">Meet all the heroes from the field</h4>
+              <p class="font-medium text-white">
+                Hockey Heroes is a fun and welcoming programme aimed at children aged 5-8 that aims to develop both their physical and character ‘superpowers’, unlocking the hero inside them!
+              </p>
             </div>
+          </div>
+          <div class="absolute flex gap-4 left-1/3 bottom-5 lg:left-10 lg:bottom-10">
+            <a href="#slide2" class="btn btn-circle bg-black hover:text-black text-white border-none">❮</a>
+            <a href="#slide2" class="btn btn-circle bg-black hover:text-black text-white border-none">❯</a>
+          </div>
+        </div>
+        <!-- second slider -->
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class="bg-[url('../Images/hp1.jpg')] bg-center bg-no-repeat bg-cover w-full rounded-2xl">
 
-            <div class="product-box">
-                <img class="product-box-img" src="images/mic.png" alt="">
-                <h4 class="product-box-title">microphone</h4>
-                <h5 class="product-box-price">$120.25</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br>available<br>
-                    Buyers protection possible!</p>
+            <div class="hidden lg:block bg-stone-900 w-[566px] p-8 rounded-2xl space-y-5 bottom-10 right-10 absolute">
+              <h4 class="text-2xl font-extrabold text-white">Meet all the heroes from the field</h4>
+              <p class="font-medium text-white">
+                Hockey Heroes is a fun and welcoming programme aimed at children aged 5-8 that aims to develop both their physical and character ‘superpowers’, unlocking the hero inside them!</p>
             </div>
+          </div>
+          <div class="absolute flex gap-4 left-1/3 bottom-5 lg:left-10 lg:bottom-10">
+            <a href="#slide1" class="btn btn-circle bg-black hover:text-black text-white border-none">❮</a>
+            <a href="#slide1" class="btn btn-circle bg-black hover:text-black text-white border-none">❯</a>
+          </div>
+        </div>
+      </div>
 
-            <div class="product-box">
-                <img class="product-box-img" src="images/airpod.png" alt="">
-                <h4 class="product-box-title">Airbuds</h4>
-                <h5 class="product-box-price">$100.00</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br>available
-                <br>Buyers protection possible!</p>
-            </div>
+      <div class="mt-4 block lg:hidden bg-stone-900 w-full p-4 rounded-2xl space-y-5">
+        <h4 class="text-xl lg:text-2xl font-extrabold text-white">Meet all the heroes from the field</h4>
+        <p class="font-medium text-sm lg:text-base text-white">
+          Hockey Heroes is a fun and welcoming programme aimed at children aged 5-8 that aims to develop both their physical and character ‘superpowers’, unlocking the hero inside them!
+        </p>
+      </div>
+    </section>
+  </header>
 
-            <div class="product-box">
-                <img class="product-box-img" src="images/drone.png" alt="">
-                <h4 class="product-box-title">Drone</h4>
-                <h5 class="product-box-price">$980.25</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                        
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br>available
-                <br>Buyers protection possible!</p>
-            </div>
+  <main class="max-w-[1140px] mx-5 lg:mx-auto">
+    <!-- Professional section -->
 
-            <div class="product-box">
-                <img class="product-box-img" src="images/lights.png" alt="">
-                <h4 class="product-box-title">Light Setup</h4>
-                <h5 class="product-box-price">$1200.00</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                       
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br> available
-                <br>    Buyers protection possible!</p>
-            </div>
+    <section class="my-24">
 
-            <div class="product-box">
-                <img class="product-box-img" src="images/setup.png" alt="">
-                <h4 class="product-box-title">Photoshoot set</h4>
-                <h5 class="product-box-price">$820.40</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                      
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br> available
-                <br>    Buyers protection possible!</p>
-            </div>
+      <div class=" border-b-2  border-t-2 space-y-4 b border-gray-200 border-dashed py-8 text-center ">
+        <h2 class="text-2xl lg:text-4xl text-[#131318] font-extrabold">Professional Hockeys Club</h2>
+        <p class="font-medium text-sm lg:text-base description">“The first Hockey Club was undoubtedly Blackheath”. The oldest record in The Club's possession is the minute book of 1861 <br> which refers to the subscription being 7/6 and the retiring secretary Mr. R. O'Neill.</p>
+      </div>
 
-            <div class="product-box">
-                <img class="product-box-img" src="images/camera.png" alt="">
-                <h4 class="product-box-title">Vlogging Camera</h4>
-                <h5 class="product-box-price">$1800.80</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br> available
-                <br>    Buyers protection possible!</p>
-            </div>
-
-            <div class="product-box">
-                <img class="product-box-img" src="images/single-light.png" alt="">
-                <h4 class="product-box-title">Green Screen</h4>
-                <h5 class="product-box-price">$25.48</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br> available
-                <br>Buyers protection possible!</p>
-            </div>
-
-            <div class="product-box">
-                <img class="product-box-img" src="images/action.png" alt="">
-                <h4 class="product-box-title">Action Camera</h4>
-                <h5 class="product-box-price">$380.00</h5>
-                <div class="product-box-rating">
-                    <div class="product-box-icon">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/star.png" alt="">
-                        <img src="images/half-star.png" alt="">
-                    </div>
-                    <h6 class="product-box-rat-num">4.99</h6>
-                </div>
-                <p class="product-box-des">Wordwide shifting <br> available <br>
-                 Buyers protection possible!</p>
-            </div>
+      <div class="grid grid-cols-1 mt-12 gap-10 mx-5 lg:grid-cols-4 ">
+        <div class="text-center space-y-6">
+          <div class="radial-progress rotate-[130deg]" style="--value:87; --size:10rem; color:#FF4240"
+            role="progressbar "><span class="rotate-[-130deg] text-3xl font-extrabold text-black">87%</span>
+          </div>
+          <h3 class="text-xl font-semibold text-[#131318]">Prayer Facility</h3>
+          <p class="text-base font-normal description">"hockey prayer facility." Prayer facilities are typically associated with religious or spiritual practices rather than sports.</p>
         </div>
 
-        <div class="see-more">
-            <a href="" class="see-more-btn">See More <i class="fa-solid fa-arrow-right right-arrow"></i></a>
+        <div class="text-center space-y-6">
+          <div class="radial-progress rotate-[130deg]" style="--value:95; --size:10rem; color:#49D293"
+            role="progressbar">
+            <span class="rotate-[-130deg] text-3xl font-extrabold text-black">95%</span>
+          </div>
+          <h3 class="text-xl font-semibold text-[#131318]">Experienced Coach</h3>
+          <p class="text-base font-normal description">Experienced hockey coaches often have a background as players in the sport, having played at high levels before transitioning to coaching.</p>
         </div>
+        <div class="text-center space-y-6">
+          <div class="radial-progress rotate-[130deg]" style="--value:90; --size:10rem; color:#d5d809"
+            role="progressbar">
+            <span class="rotate-[-130deg] text-3xl font-extrabold text-black">90%</span>
+          </div>
+          <h3 class="text-xl font-semibold text-[#131318]">Senior Player</h3>
+          <p class="text-base font-normal description">senior players have a wealth of experience, having dedicated many years to playing hockey. </p>
+        </div>
+        <div class="text-center space-y-6">
+          <div class="radial-progress rotate-[130deg]" style="--value:80; --size:10rem; color:#4C8DF1"
+            role="progressbar">
+            <span class="rotate-[-130deg] text-3xl font-extrabold text-black">80%</span>
+          </div>
+          <h3 class="text-xl font-semibold text-[#131318]">Training Ground</h3>
+          <p class="text-base font-normal description">Hockey training grounds can be both indoor and outdoor, depending on the climate and the level of play.</p>
+        </div>
+      </div>
 
     </section>
 
-    <!-- End of the product section -->
+    <!-- program section -->
+    <section>
+      <div class="border-b-2  border-t-2 space-y-4 b border-gray-200 border-dashed py-8 text-center">
+        <h2 class="pb-4 text-4xl text-[#131318] font-extrabold">Program Sections</h2>
+        <p class="font-medium text-base description">Many programs have elite or travel teams that bring together highly skilled players. <br> These teams often compete at higher levels, both regionally and nationally. </p>
+      </div>
 
-    <!-- start Featured section -->
+      <!-- program section banner -->
+      <section class="mt-12 mb-24">
 
-    <section class="featured">
-        <img src="images/gear.png" alt="" class="featured-img">
-        <div class="featured-container">
-            <h2 class="featured-title">Featured products at one place</h2>
-            <p class="featured-des">Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia consequat duis enim velit mollit. <br> Exercitation veniam consequat sunt nostrud amet.</p>
-            <button class="featured-btn">Join Now <i class="fa-solid fa-arrow-right right-arrow"></i></button>
-        </div>
-    </section>
-    
-    <!-- End of the featured section -->
-    </main>  
-
-    <!-- Start of footer section -->
-
-    <footer>
-        <section class="footer">
-            <h3 class="footer-title">Influencer products</h3>
-            <p class="footer-des">
-                Copyright © 2020  influencer products
-                <br>
-                All rights reserved
+        <div class="grid gap-6 grid-cols-1 lg:grid-cols-2">
+          <div
+            class="bg-[url('/Images/2.png')] rounded-xl w-full bg-center bg-no-repeat bg-cover lg:px-10 lg:pb-10 lg:pt-24 p-6 bg-blend-overlay bg-[#13131880]">
+            <h4 class="text-white text-[28px] font-extrabold ">Junior Program</h4>
+            <p class="text-white font-medium my-8">
+              Hockey's junior program provides opportunities for players ages 16-to-20 to hone and enhance their skills
+              and is an important part of the organization's overall efforts related to player development.
             </p>
-            <div class="footer-img">
-                <a href=""><img src="images/Instagram.png" alt=""></a>
-                <a href=""><img src="images/Dribbble.png" alt=""></a>
-                <a href=""><img src="images/Twitter.png" alt=""></a>
-                <a href=""><img src="images/Youtube.png" alt=""></a>
+            <a class="py-3 cursor-pointer px-5 bg-red-500 font-bold rounded-lg text-white text-xl">Register
+              Now!</a>
+          </div>
+          <div
+            class="bg-[url('/Images/3.png')] rounded-xl w-full bg-center bg-no-repeat bg-cover lg:px-10 lg:pb-10 lg:pt-24 p-6 bg-blend-overlay bg-[#13131880]">
+            <h4 class="text-white text-[28px] font-extrabold ">Teenager Program</h4>
+            <p class="text-white font-medium my-8">
+              As the world's largest introduction-to-hockey initiative, annually spanning more than 800 rinks
+              nationwide, Try Hockey For Free Days provide children the opportunity to experience playing hockey for the
+              first time with certified USA Hockey coaches and caring volunteers on the ice.
+            </p>
+            <a class="py-3 cursor-pointer px-5 bg-red-500 font-bold rounded-lg text-white text-xl">Register
+              Now!</a>
+          </div>
+        </div>
+        <div class="mt-6">
+          <div
+            class="bg-[url('/Images/4.png')] rounded-xl w-full bg-center bg-no-repeat bg-cover lg:px-10 lg:pb-10 lg:pt-52 p-6 bg-blend-overlay bg-[#13131880]">
+            <h4 class="text-white text-[28px] font-extrabold ">Professional Program</h4>
+            <p class="text-white font-medium my-8 lg:w-[520px]">
+
+              Hockey Department is dedicated to enabling our student-athletes to reach their highest level of
+              achievement. Whether the goal is to reach the post-secondary, national, international, or professional
+              level, our staff is committed to developing a strong foundation, which will be the springboard for future
+              success.
+            </p>
+            <a class="py-3 cursor-pointer px-5 bg-red-500 font-bold rounded-lg text-white text-xl">Register
+              Now!</a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="my-24">
+      <div class="text-center border-b-2  border-t-2 space-y-4 b border-gray-200 border-dashed py-8 ">
+        <h2 class="text-4xl font-extrabold text-[#131318] mb-6">Our New Products</h2>
+        <p class="text-base font-medium description">Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+          turpis placerat <br> dolor. Purus urna in sit nullam proin.</p>
+      </div>
+      <!-- cards  section -->
+      <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 mt-12 mb-24">
+
+        <!-- first card -->
+
+        <div
+          class="flex lg:flex-row flex-col gap-5 p-6 border-solid border border-neutral-900 border-opacity-10 rounded-2xl">
+          <img src="Images/5.png" alt="">
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-star text-amber-500 mr-2"></i> 5.0
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-eye fa-fw mr-2"></i> 5610
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-heart mr-2"></i> 756
+              </h5>
             </div>
+            <h4 class="text-neutral-900 text-xl font-extrabold">World Cup Flags Football</h4>
+            <p class="text-opacity-60">Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+            <div class="flex gap-4">
+              <h5 class="text-red-500 text-lg font-extrabold">
+                Price - $22.00</h5>
+              <p class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-cart-shopping fa-fw mr-2"></i> Delivery Fee : Free
+              </p>
+            </div>
+          </div>
+        </div>
 
-        </section>
+        <!-- second card -->
+        <div
+          class="flex lg:flex-row flex-col gap-5 p-6 border-solid border border-neutral-900 border-opacity-10 rounded-2xl">
+          <img src="Images/6.png" alt="">
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-star text-amber-500 mr-2"></i> 4.9
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-eye fa-fw mr-2"></i> 1990
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-heart mr-2"></i> 1441
+              </h5>
+            </div>
+            <h4 class="text-neutral-900 text-xl font-extrabold">World Cup Flags Football</h4>
+            <p class="text-opacity-60">Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+            <div class="flex gap-4">
+              <h5 class="text-red-500 text-lg font-extrabold">
+                Price - $22.00</h5>
+              <p class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-cart-shopping fa-fw mr-2"></i> Delivery Fee : Free
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- third card -->
+        <div
+          class="flex gap-5 lg:flex-row flex-col p-6 border-solid border border-neutral-900 border-opacity-10 rounded-2xl">
+          <img src="Images/7.png" alt="">
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-star text-amber-500 mr-2"></i> 5.0
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-eye fa-fw mr-2"></i> 1540
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-heart mr-2"></i> 1200
+              </h5>
+            </div>
+            <h4 class="text-neutral-900 text-xl font-extrabold">Cap For Hockeys</h4>
+            <p class="text-opacity-60">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+            <div class="flex gap-4">
+              <h5 class="text-red-500 text-lg font-extrabold">
+                Price - $22.00</h5>
+              <p class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-cart-shopping fa-fw mr-2"></i> Delivery Fee : Free
+              </p>
+            </div>
+          </div>
+        </div>
 
-    </footer>
+        <!-- fourth card -->
+        <div
+          class="flex lg:flex-row flex-col gap-5 p-6 border-solid border border-neutral-900 border-opacity-10 rounded-2xl">
+          <img src="Images/8.png" alt="">
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-star text-amber-500 mr-2"></i> 4.5
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-eye fa-fw mr-2"></i> 1100
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-heart mr-2"></i> 600
+              </h5>
+            </div>
+            <h4 class="text-neutral-900 text-xl font-extrabold">World Cup Flags Football</h4>
+            <p class="text-opacity-60">Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+            <div class="flex gap-4">
+              <h5 class="text-red-500 text-lg font-extrabold">
+                Price - $22.00</h5>
+              <p class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-cart-shopping fa-fw mr-2"></i> Delivery Fee : Free
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <!-- End of the footer section -->
+        <!-- fifth card -->
+        <div
+          class="flex lg:flex-row flex-col gap-5 p-6 border-solid border border-neutral-900 border-opacity-10 rounded-2xl">
+          <img src="Images/9.png" alt="">
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-star text-amber-500 mr-2"></i> 4.0
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-eye fa-fw mr-2"></i> 1400
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-heart mr-2"></i> 500
+              </h5>
+            </div>
+            <h4 class="text-neutral-900 text-xl font-extrabold">World Cup Flags Football</h4>
+            <p class="text-opacity-60">Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+            <div class="flex gap-4">
+              <h5 class="text-red-500 text-lg font-extrabold">
+                Price - $22.00</h5>
+              <p class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-cart-shopping fa-fw mr-2"></i> Delivery Fee : Free
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- sixth card -->
+        <div
+          class="flex lg:flex-row flex-col gap-5 p-6 border-solid border border-neutral-900 border-opacity-10 rounded-2xl">
+          <img src="Images/10.png" alt="">
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-star text-amber-500 mr-2"></i> 5.0
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-eye fa-fw mr-2"></i> 420
+              </h5>
+              <h5 class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-regular fa-heart mr-2"></i>200
+              </h5>
+            </div>
+            <h4 class="text-neutral-900 text-xl font-extrabold">World Cup Flags Football</h4>
+            <p class="text-opacity-60">Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+            <div class="flex gap-4">
+              <h5 class="text-red-500 text-lg font-extrabold">
+                Price - $22.00</h5>
+              <p class="text-neutral-900 text-opacity-50 font-medium">
+                <i class="fa-solid fa-cart-shopping fa-fw mr-2"></i> Delivery Fee : Free
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients section -->
+    <section>
+      <div class="border-b-2  border-t-2 space-y-4 b border-gray-200 border-dashed py-8 text-center ">
+
+        <h2 class="pb-4 text-4xl text-[#131318] font-extrabold">Clients Question</h2>
+        <p class="mb-12 font-medium text-base description">Dit amet consectetur. Condimentum dignissim adipiscing
+          aliquam turpis placerat dolor. Purus urna in sit
+          nullam proin. </p>
+      </div>
+
+      <div class=" ">
+        <div
+          class=" flex-col lg:flex-row mt-12 gap-10 mb-24 p-6 lg:p-8 flex rounded-2xl border border-solid border-neutral-900 border-opacity-10">
+          <img src="Images/11.png" class="max-w-sm rounded-lg" />
+          <div>
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+                Our Equipment
+              </div>
+              <div class="collapse-content">
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Hockey Training
+              </div>
+              <div class="collapse-content">
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Private Lessons
+              </div>
+              <div class="collapse-content">
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Ski Touring
+              </div>
+              <div class="collapse-content">
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus ">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Booking
+              </div>
+              <div class="collapse-content">
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                Pricings
+              </div>
+              <div class="collapse-content">
+                <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit enim sagittis turpis in magna.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer p-10 bg-neutral text-neutral-content">
+    <nav>
+      <header class="footer-title">Services</header> 
+      <a class="link link-hover">Branding</a>
+      <a class="link link-hover">Design</a>
+      <a class="link link-hover">Marketing</a>
+      <a class="link link-hover">Advertisement</a>
+    </nav> 
+    <nav>
+      <header class="footer-title">Company</header> 
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav> 
+    <nav>
+      <header class="footer-title">Legal</header> 
+      <a class="link link-hover">Terms of use</a>
+      <a class="link link-hover">Privacy policy</a>
+      <a class="link link-hover">Cookie policy</a>
+    </nav>
+  </footer>
+
 </body>
+
 </html>
